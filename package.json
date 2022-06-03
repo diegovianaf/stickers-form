@@ -1,0 +1,24 @@
+{
+  "name": "stickers-form",
+  "version": "1.0.0",
+  "description": "A frontend challenge from VAGAS.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegovianaf/stickers-form.git"
+  },
+  "author": "Diego Viana",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diegovianaf/stickers-form/issues"
+  },
+  "homepage": "https://github.com/diegovianaf/stickers-form#readme",
+  "devDependencies": {
+    "eslint": "^8.16.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
+  }
+}
