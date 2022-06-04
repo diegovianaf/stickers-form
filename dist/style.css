@@ -111,16 +111,19 @@ body {
   display: flex;
 }
 
-.counter svg {
+.counter .counter-btn {
+  border: none;
   cursor: pointer;
   fill: #2f3676;
+  height: 42px;
+  width: 42px;
 }
 
-.counter svg:hover {
+.counter .counter-btn:hover {
   fill: #191847;
 }
 
-.counter svg.disabled {
+.counter .counter-btn.disabled {
   cursor: default;
   fill: #c5cfd6;
 }
@@ -138,8 +141,10 @@ body {
   width: 60px;
 }
 
-.counter .quantity::placeholder {
-  color: #071723;
+.quantity::-webkit-inner-spin-button, 
+.quantity::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
 
 .counter .quantity:focus::placeholder {
