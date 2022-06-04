@@ -8,9 +8,8 @@ counter.addEventListener('change', () => {
   counter.setAttribute('value', count)
   counter.valueAsNumber = count
 
-  if (counter.value < 1) decrease.classList.add('disabled')
-
-  if (counter.value > 0) decrease.classList.remove('disabled')
+  if (counter.value < 1) decrease.disabled = true
+  else decrease.disabled = false
 })
 
 decrease.addEventListener('click', (e) => {
@@ -23,7 +22,8 @@ decrease.addEventListener('click', (e) => {
   counter.setAttribute('value', count)
   counter.valueAsNumber = count
 
-  if (counter.value < 1) decrease.classList.add('disabled')
+  if (counter.value < 1) decrease.disabled = true
+  else decrease.disabled = false
 })
 
 increase.addEventListener('click', (e) => {
@@ -36,5 +36,6 @@ increase.addEventListener('click', (e) => {
   counter.setAttribute('value', count)
   counter.valueAsNumber = count
 
-  if (counter.value > 0) decrease.classList.remove('disabled')
+  if (counter.value < 1) decrease.disabled = true
+  else decrease.disabled = false
 })
