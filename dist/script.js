@@ -2,40 +2,24 @@ const counter = document.querySelector('.quantity')
 const decrease = document.querySelector('.decrease')
 const increase = document.querySelector('.increase')
 
-counter.addEventListener('change', () => {
-  const count = counter.value
-
-  counter.setAttribute('value', count)
-  counter.valueAsNumber = count
-
-  if (counter.value < 1) decrease.disabled = true
-  else decrease.disabled = false
-})
-
-decrease.addEventListener('click', (e) => {
+function updateCounter(e) {
   let count = counter.value
+  const element = e.currentTarget.classList
 
   e.preventDefault()
 
-  if (count > 0) count--
+  if (element.contains('decrease') && count > 0) count--
+  else if (element.contains('increase') && count >= 0) count++
 
   counter.setAttribute('value', count)
   counter.valueAsNumber = count
 
   if (counter.value < 1) decrease.disabled = true
   else decrease.disabled = false
-})
 
-increase.addEventListener('click', (e) => {
-  let count = counter.value
+  if (counter.value > 0) counter.classList.remove('error')
+}
 
-  e.preventDefault()
-
-  if (count >= 0) count++
-
-  counter.setAttribute('value', count)
-  counter.valueAsNumber = count
-
-  if (counter.value < 1) decrease.disabled = true
-  else decrease.disabled = false
-})
+counter.addEventListener('change', updateCounter)
+decrease.addEventListener('click', updateCounter)
+increase.addEventListener('click', updateCounter)
