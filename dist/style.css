@@ -178,9 +178,10 @@ body {
 /* FOOTER - BUTTON */
 
 .footer {
+  align-items: center;
   background: #dde3e9;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding: 32px;
 }
 
@@ -208,4 +209,10 @@ body {
   border-color: #555555;
   color: #555555;
   cursor: default;
+}
+
+.footer .success-message {
+  color: #00c57c;
+  font-size: 1.125rem;
+  font-weight: 600;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -21,15 +21,15 @@
       <fieldset class="fieldset stickers-group">
         <label class="field-title" for="stickers">Quais stickers:</label>
         <div class="sticker">
-          <input type="checkbox" name="react" id="react">
+          <input type="checkbox" name="sticker" id="react" value="React">
           <label for="react">React</label>
         </div>
         <div class="sticker">
-          <input type="checkbox" name="vue" id="vue">
+          <input type="checkbox" name="sticker" id="vue" value="Vue">
           <label for="vue">Vue</label>
         </div>
         <div class="sticker">
-          <input type="checkbox" name="angular" id="angular">
+          <input type="checkbox" name="sticker" id="angular" value="Angular">
           <label for="angular">Angular</label>
         </div>
       </fieldset>
@@ -42,7 +42,7 @@
               <path d="M4.667 0A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667zm28 23.333H9.333v-4.666h23.334v4.666z" />
             </svg>
           </button>
-					<input class="quantity" type="number" name="quantity" id="quantity" placeholder="0" required />
+					<input class="quantity" type="number" name="quantity" id="quantity" placeholder="0" min="1" max="1000" required />
           <button class="increase counter-btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42">
               <path d="M4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42zm4.666-23.333h9.334V9.333h4.666v9.334h9.334v4.666h-9.334v9.334h-4.666v-9.334H9.333v-4.666z" />
@@ -57,7 +57,8 @@
       </fieldset>
         
       <footer class="footer">
-        <button class="button">Enviar</button>
+        <p class="success-message"></p>
+        <button class="button" id="submit" type="submit">Enviar</button>
       </footer>
     </form>
   </main>
