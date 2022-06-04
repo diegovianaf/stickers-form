@@ -63,6 +63,7 @@ body {
 
 .sticker {
   margin-bottom: 8px;
+  max-width: max-content;
 }
 
 .sticker:last-child {
