@@ -11,9 +11,7 @@
         "sourceType": "module"
     },
     "rules": {
-        "semi": 0
-    },
-    "import/extensions": [
-        "always"
-    ]
+        "semi": 0,
+        "no-plusplus": 0
+    }
 }
