@@ -17,20 +17,19 @@
     <header class="header">
       <h1 class="title">Formulário<br />para compra de<br /><span>Pacote de Stickers</span></h1>
     </header>
-
-    <form class="form">
+    <form class="form" name="stickerPack" id="stickerPack">
       <fieldset class="fieldset stickers-group">
         <label class="field-title" for="stickers">Quais stickers:</label>
         <div class="sticker">
-          <input type="checkbox" id="react">
+          <input type="checkbox" name="react" id="react">
           <label for="react">React</label>
         </div>
         <div class="sticker">
-          <input type="checkbox" id="vue">
+          <input type="checkbox" name="vue" id="vue">
           <label for="vue">Vue</label>
         </div>
         <div class="sticker">
-          <input type="checkbox" id="angular">
+          <input type="checkbox" name="angular" id="angular">
           <label for="angular">Angular</label>
         </div>
       </fieldset>
@@ -38,12 +37,12 @@
       <fieldset class="fieldset quantity-group">
 				<label class="field-title" for="quantity">Quantos stickers de cada?</label>
         <div class="counter">
-          <button class="decrease counter-btn disabled">
+          <button class="decrease counter-btn" disabled>
             <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42">
               <path d="M4.667 0A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667zm28 23.333H9.333v-4.666h23.334v4.666z" />
             </svg>
           </button>
-					<input class="quantity" type="number" placeholder="0" required />
+					<input class="quantity" type="number" name="quantity" id="quantity" placeholder="0" required />
           <button class="increase counter-btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42">
               <path d="M4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42zm4.666-23.333h9.334V9.333h4.666v9.334h9.334v4.666h-9.334v9.334h-4.666v-9.334H9.333v-4.666z" />
@@ -54,7 +53,7 @@
 
       <fieldset class="fieldset comments-group">
         <label class="field-title" for="comments">Observações:</label>
-        <textarea class="comments" name="description" placeholder="Alguma dúvida? Recado?"></textarea>
+        <textarea class="comments" name="comments" id="comments" placeholder="Alguma dúvida? Recado?"></textarea>
       </fieldset>
         
       <footer class="footer">
