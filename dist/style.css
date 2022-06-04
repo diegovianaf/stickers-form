@@ -124,7 +124,7 @@ body {
   fill: #191847;
 }
 
-.counter .counter-btn.disabled {
+.counter .counter-btn:disabled {
   cursor: default;
   fill: #c5cfd6;
 }
