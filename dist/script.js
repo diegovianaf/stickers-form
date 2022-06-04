@@ -39,6 +39,13 @@ function validateCounter(e) {
     updateCounter()
   } else {
     message.textContent = 'Formulário enviado com sucesso!'
+
+    setTimeout(() => {
+      message.innerHTML = ''
+    }, 2000)
+
+    counter.value = ''
+    decrease.disabled = true
   }
 }
 
