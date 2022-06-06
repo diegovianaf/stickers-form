@@ -28,17 +28,28 @@ increase.addEventListener('click', updateCounter)
 
 const button = document.querySelector('#submit')
 const message = document.querySelector('.success-message')
+const selected = document.querySelectorAll('.sticker')
 
-function validateCounter(e) {
+function formValidation(e) {
   e.preventDefault()
+
+  const checkboxes = document.querySelectorAll('input[name="sticker"]:checked')
+
+  const items = []
+  checkboxes.forEach((checkbox) => {
+    items.push(checkbox.value)
+  })
 
   const counterEmpty = counter.value === '0' || counter.value === ''
 
   if (counterEmpty) {
     counter.classList.add('error')
     updateCounter()
+  } else if (items.length === 0) {
+    selected[0].classList.add('error')
   } else {
     message.textContent = 'Formulário enviado com sucesso!'
+    selected[0].classList.remove('error')
 
     setTimeout(() => {
       message.innerHTML = ''
@@ -49,4 +60,4 @@ function validateCounter(e) {
   }
 }
 
-button.addEventListener('click', validateCounter)
+button.addEventListener('click', formValidation)

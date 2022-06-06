@@ -93,6 +93,10 @@ body {
   width: 24px;
 }
 
+.sticker.error label::before {
+  background: #F59393;
+}
+
 .sticker input:hover + label::before {
   background: #191847;
 }
